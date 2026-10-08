@@ -106,7 +106,7 @@ nav a {
     radial-gradient(circle at 68% 36%, rgba(244, 217, 133, 0.38), transparent 25%),
     linear-gradient(90deg, rgba(7, 23, 44, 0.98), rgba(7, 23, 44, 0.68) 48%, rgba(7, 23, 44, 0.38)),
     linear-gradient(0deg, rgba(7, 23, 44, 0.96), rgba(7, 23, 44, 0.08) 58%),
-    url("./assets/hero-risset-divino.png") center / cover no-repeat;
+    url("./assets/hero-risset-divino.webp") center / cover no-repeat;
   filter: saturate(1.16) contrast(1.04);
   transform: scale(1.04);
 }
@@ -571,7 +571,7 @@ dd {
   color: var(--white);
   background:
     linear-gradient(0deg, rgba(7, 23, 44, 0.9), rgba(7, 23, 44, 0.9)),
-    url("./assets/hero-risset-divino.png") center / cover no-repeat;
+    url("./assets/hero-risset-divino.webp") center / cover no-repeat;
 }
 
 .final-call p {
@@ -692,4 +692,32 @@ footer p {
   footer {
     display: block;
   }
+}
+
+/* Estabilização da navegação e leitura integral das artes. */
+.navigation summary { display: none; }
+.navigation:not([open]) nav { display: flex; }
+nav { flex-wrap: wrap; justify-content: flex-end; }
+.hero-stage > *, .visual-section > *, .movement-feature > * { min-width: 0; }
+.image-frame.wide img { aspect-ratio: auto; height: auto; object-fit: contain; }
+.image-frame figcaption { padding: 12px 16px; color: var(--muted); font-size: .9rem; }
+:root { --gold: #96701b; }
+.hero, .band, .final-call, .topbar, .impact-strip { --gold: #d7ae4a; }
+section[id], main[id] { scroll-margin-top: 110px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #0e5e9e; outline-offset: 5px; }
+.topbar a:focus-visible, .topbar summary:focus-visible { outline-color: #f4d985; }
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 12px; background: white; color: #07172c; transform: translateY(-150%); }
+.skip-link:focus { transform: translateY(0); }
+@media (max-width: 1100px) {
+  .hero-stage { grid-template-columns: 1fr; }
+  .topbar { position: absolute; align-items: flex-start; gap: 12px; background: #07172c; }
+  .navigation { max-width: 55%; }
+  .navigation summary { display: list-item; cursor: pointer; padding: 8px; }
+  .navigation nav { display: flex; flex-direction: column; gap: 0; padding-top: 8px; }
+  .navigation:not([open]) nav { display: none; }
+  nav a { padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }

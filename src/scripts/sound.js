@@ -1,4 +1,13 @@
 (() => {
+  const menu = document.querySelector('.navigation');
+  const mobile = matchMedia('(max-width: 1100px)');
+  function syncMenu() { if (menu) menu.open = !mobile.matches; }
+  syncMenu();
+  mobile.addEventListener('change', syncMenu);
+  menu?.addEventListener('click', (event) => { if (event.target.closest('a') && mobile.matches) menu.open = false; });
+  menu?.addEventListener('keydown', (event) => { if (event.key === 'Escape' && mobile.matches) { menu.open = false; menu.querySelector('summary').focus(); } });
+})();
+(() => {
   const button = document.getElementById("soundToggle");
   if (!button) return;
   const label = button.querySelector(".sound-label");

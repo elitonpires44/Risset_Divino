@@ -9,14 +9,17 @@ export const site = {
     subtitle: "Projeto Milênio",
   },
   nav: [
+    { label: "Home", href: "#inicio" },
     { label: "Propósito", href: "#proposito" },
     { label: "Plano", href: "#plano" },
-    { label: "Obra", href: "#obra" },
+    { label: "Portal Eterno", href: "#obra" },
     { label: "Movimento", href: "#movimento" },
+    { label: "Participe", href: "#participar" },
+    { label: "Contato", href: "#contato" },
   ],
   hero: {
     eyebrow: "Projeto Milênio - RISSET DIVINO",
-    title: "Família de Deus Ativa em Movimento",
+    title: "A Família de Deus Ativa em Movimento",
     lead:
       "Não como troféu. Como responsabilidade. Não como domínio. Como serviço. Um convite para que cada leitor contemple Jesus Cristo.",
     note:
@@ -123,7 +126,7 @@ export const site = {
       "A mensagem é clara: conhecer a verdade, buscar direção, envolver-se, contribuir, compartilhar e apoiar projetos que levem luz às nações.",
     label: "QUERO PARTICIPAR",
     href:
-      "https://wa.me/5511997007000?text=Quero%20participar%20do%20Projeto%20Mil%C3%AAnio%20RISSET%20DIVINO.",
+      "#contato",
   },
   footer: {
     project: "Projeto Milênio - RISSET DIVINO",

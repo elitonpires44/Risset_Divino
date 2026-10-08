@@ -5,3 +5,9 @@ dist/
 public/assets/
 site-archive*.tar.gz
 *.log
+
+.next/
+.env*
+!.env.example
+public/styles.css
+public/app.js

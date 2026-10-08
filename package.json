@@ -1,0 +1,10 @@
+{
+  "name": "projeto-milenio-risset-divino",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node --check src/render.js && node --check src/content/site.js && node --check src/scripts/sound.js"
+  }
+}

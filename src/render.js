@@ -168,7 +168,7 @@ function renderCta() {
       <p class="section-kicker">${site.cta.kicker}</p>
       <h2 id="participar-title">${site.cta.title}</h2>
       <p>${site.cta.text}</p>
-      <a class="participate" href="${site.cta.href}" target="_blank" rel="noopener">${site.cta.label}</a>
+      <a class="participate" href="${site.cta.href}">${site.cta.label}</a>
     </section>
   `;
 }

@@ -24,7 +24,7 @@ export default async function handler(request, response) {
     return response.status(400).json({ error: "Confira os campos obrigatórios." });
   }
   const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const key = process.env.SUPABASE_PUBLISHABLE_KEY;
   if (!url || !key) {
     return response.status(503).json({ error: "O formulário está em preparação. Tente novamente em breve." });
   }

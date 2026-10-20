@@ -5,6 +5,6 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --check src/render.js && node --check src/content/site.js && node --check src/scripts/sound.js"
+    "check": "node --check src/render.js && node --check src/participar.js && node --check src/content/site.js && node --check src/scripts/sound.js && node --check src/scripts/participar.js && node --check api/participar.js"
   }
 }

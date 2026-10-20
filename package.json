@@ -5,6 +5,6 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --check src/render.js && node --check src/participar.js && node --check src/content/site.js && node --check src/scripts/sound.js && node --check src/scripts/participar.js && node --check api/participar.js"
+    "check": "node --check src/render.js && node --check src/participar.js && node --check src/content/site.js && node --check src/scripts/sound.js && node --check src/scripts/participar.js && node --check api/participar.js && node --check api/assistente.js && node --check src/acolhimento.js && node --check src/content/acolhimento.js && node --check src/scripts/acolhimento.js"
   }
 }

@@ -9,6 +9,7 @@ export const site = {
     subtitle: "Projeto Milênio",
   },
   nav: [
+    { label: "Conhecer", href: "/conhecer" },
     { label: "Propósito", href: "#proposito" },
     { label: "Plano", href: "#plano" },
     { label: "Obra", href: "#obra" },
@@ -130,3 +131,4 @@ export const site = {
     line: "A Família de Deus Ativa em Movimento - Brasil, 2026",
   },
 };
+

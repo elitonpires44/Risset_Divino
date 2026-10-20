@@ -2,6 +2,7 @@ import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderPage } from "../src/render.js";
+import { renderParticipationPage } from "../src/participar.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
@@ -33,10 +34,13 @@ async function restoreAsset(fileName) {
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(join(dist, "assets"), { recursive: true });
+await mkdir(join(dist, "participar"), { recursive: true });
 
 await writeFile(join(dist, "index.html"), renderPage(), "utf8");
+await writeFile(join(dist, "participar", "index.html"), renderParticipationPage(), "utf8");
 await cp(join(root, "src/styles/main.css"), join(dist, "styles.css"));
 await cp(join(root, "src/scripts/sound.js"), join(dist, "app.js"));
+await cp(join(root, "src/scripts/participar.js"), join(dist, "participar.js"));
 await Promise.all(assets.map(restoreAsset));
 
 console.log("Build concluído em dist/");

@@ -500,6 +500,14 @@ h3 {
   object-fit: cover;
 }
 
+.image-frame.wide.contain {
+  background: #07172c;
+}
+
+.image-frame.wide.contain img {
+  object-fit: contain;
+}
+
 .book {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.94)),
@@ -516,8 +524,11 @@ h3 {
 }
 
 .book-card img {
+  width: 100%;
+  max-height: 640px;
   border-radius: 8px;
   box-shadow: var(--shadow);
+  object-fit: contain;
 }
 
 dl {
@@ -848,6 +859,10 @@ footer p {
 
   .image-frame.wide img {
     aspect-ratio: 4 / 3;
+  }
+
+  .image-frame.wide.contain img {
+    aspect-ratio: auto;
   }
 
   footer {

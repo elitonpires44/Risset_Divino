@@ -10,9 +10,11 @@ const dist = join(root, "dist");
 const assetData = join(root, "src/assets-data");
 const assets = [
   "hero-risset-divino.png",
+  "da-origem-a-origem.png",
   "identidade-risset.png",
   "logo-risset.png",
   "plano-divino.png",
+  "portal-eterno-capa.png",
   "risset-tema-instrumental.wav",
   "sete-promulgacoes.png",
 ];

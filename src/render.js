@@ -121,7 +121,7 @@ function renderVisual(visual) {
   return `
     <section class="visual-section${visual.reverse ? " reverse" : ""}"${visual.id ? ` id="${visual.id}"` : ""}>
       ${sectionCopy(visual)}
-      <figure class="image-frame wide">
+      <figure class="image-frame wide${visual.contain ? " contain" : ""}">
         ${image(visual.image)}
       </figure>
     </section>

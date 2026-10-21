@@ -87,6 +87,18 @@ export const site = {
       },
       reverse: true,
     },
+    {
+      kicker: "Escola Divina",
+      title: "Da Origem à Origem.",
+      text:
+        "A Terra é o ambiente da Escola Divina: formar, capacitar, apoiar e acompanhar até que a Graça recebida se manifeste em fé, gratidão, serviço e adoração.",
+      image: {
+        src: "./assets/da-origem-a-origem.png",
+        alt: "Jornada da Escola Divina — Da Origem à Origem",
+      },
+      contain: true,
+      reverse: false,
+    },
   ],
   book: {
     kicker: "Obra base",
@@ -94,8 +106,8 @@ export const site = {
     text:
       "A base textual do projeto reúne reflexão espiritual, formação, responsabilidade autoral e visão profética. Graça recebida. Vida consumada. Adoração.",
     image: {
-      src: "./assets/logo-risset.png",
-      alt: "Símbolo RISSET Divino com cruz e pomba",
+      src: "./assets/portal-eterno-capa.png",
+      alt: "Capa do livro O Portal Eterno — O Fundamento do Propósito",
     },
     meta: [
       ["Autor", "Eliton Pires de Oliveira"],

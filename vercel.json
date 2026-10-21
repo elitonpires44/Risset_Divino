@@ -1,6 +1,12 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/participar", "destination": "/participar/index.html" },
+    { "source": "/participar/", "destination": "/participar/index.html" },
+    { "source": "/conhecer", "destination": "/conhecer/index.html" },
+    { "source": "/conhecer/", "destination": "/conhecer/index.html" }
+  ],
   "cleanUrls": true,
   "trailingSlash": false
 }

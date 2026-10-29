@@ -37,15 +37,22 @@ async function restoreAsset(fileName) {
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(join(dist, "assets"), { recursive: true });
-await writeFile(join(dist, "conhecer.html"), renderWelcomePage(), "utf8");
-await cp(join(root, "src/scripts/acolhimento.js"), join(dist, "acolhimento.js"));
+await mkdir(join(dist, "participar"), { recursive: true });
+await mkdir(join(dist, "conhecer"), { recursive: true });
+
+const participationPage = renderParticipationPage();
+const welcomePage = renderWelcomePage();
 
 await writeFile(join(dist, "index.html"), renderPage(), "utf8");
-await writeFile(join(dist, "participar.html"), renderParticipationPage(), "utf8");
+await writeFile(join(dist, "participar.html"), participationPage, "utf8");
+await writeFile(join(dist, "participar", "index.html"), participationPage, "utf8");
+await writeFile(join(dist, "conhecer.html"), welcomePage, "utf8");
+await writeFile(join(dist, "conhecer", "index.html"), welcomePage, "utf8");
+
 await cp(join(root, "src/styles/main.css"), join(dist, "styles.css"));
 await cp(join(root, "src/scripts/sound.js"), join(dist, "app.js"));
 await cp(join(root, "src/scripts/participar.js"), join(dist, "participar.js"));
+await cp(join(root, "src/scripts/acolhimento.js"), join(dist, "acolhimento.js"));
 await Promise.all(assets.map(restoreAsset));
 
-console.log("Build concluído em dist/");
-
+console.log("Build concluído em dist/ com rotas diretas /participar e /conhecer");

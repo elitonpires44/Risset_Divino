@@ -40,7 +40,7 @@ export function renderParticipationPage() {
           <div class="response-sheet">
             <strong>Ficha oficial para impressão e compartilhamento</strong>
             <p>Indicada para congressos, encontros, igrejas, associações e eventos locais. Depois de preenchida, pode ser entregue ao responsável pelo encontro.</p>
-            <a class="participate secondary-action" href="/assets/ficha-oficial-resposta-risset-divino.pdf" target="_blank" rel="noopener" download>BAIXAR FICHA OFICIAL (PDF)</a>
+            <a class="participate secondary-action" href="/assets/ficha-oficial-resposta-risset-divino.pdf" download="FICHA_OFICIAL_RESPOSTA_RISSET_DIVINO.pdf">BAIXAR FICHA OFICIAL (PDF)</a>
           </div>
         </article>
         <form class="participation-form" id="participationForm">

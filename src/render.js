@@ -63,7 +63,9 @@ function renderHero() {
           </div>
         </div>
         <figure class="hero-showcase" aria-label="Arte principal do Projeto Milênio RISSET DIVINO">
-          ${image(site.hero.image)}
+          <a class="art-zoom" href="${site.hero.image.src}" target="_blank" rel="noopener" aria-label="Abrir Arte principal em tamanho original">
+            ${image(site.hero.image)}
+          </a>
         </figure>
       </div>
     </section>
@@ -122,7 +124,9 @@ function renderVisual(visual) {
     <section class="visual-section${visual.reverse ? " reverse" : ""}"${visual.id ? ` id="${visual.id}"` : ""}>
       ${sectionCopy(visual)}
       <figure class="image-frame wide${visual.contain ? " contain" : ""}">
-        ${image(visual.image)}
+        <a class="art-zoom" href="${visual.image.src}" target="_blank" rel="noopener" aria-label="Abrir ${visual.image.alt} em tamanho original">
+          ${image(visual.image)}
+        </a>
       </figure>
     </section>
   `;
@@ -132,7 +136,9 @@ function renderBook() {
   return `
     <section class="book" id="obra">
       <div class="book-card">
-        ${image(site.book.image)}
+        <a class="art-zoom" href="${site.book.image.src}" target="_blank" rel="noopener" aria-label="Abrir capa do livro em tamanho original">
+          ${image(site.book.image)}
+        </a>
         <div>
           <p class="section-kicker">${site.book.kicker}</p>
           <h2>${site.book.title}</h2>
@@ -152,7 +158,9 @@ function renderMovement() {
       <div class="movement-feature">
         ${sectionCopy(site.movement)}
         <figure class="image-frame identity">
-          ${image(site.movement.image)}
+          <a class="art-zoom" href="${site.movement.image.src}" target="_blank" rel="noopener" aria-label="Abrir identidade de colaboradores em tamanho original">
+            ${image(site.movement.image)}
+          </a>
         </figure>
       </div>
       <div class="movement-grid">

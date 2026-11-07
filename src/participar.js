@@ -21,7 +21,7 @@ export function renderParticipationPage() {
     </header>
     <main>
       <section class="participation-hero">
-        <p class="eyebrow">Congresso MEDADE · 29/10 a 01/11/2026</p>
+        <p class="eyebrow">Congressos · Eventos locais · Participação contínua</p>
         <h1>Da contemplação à participação.</h1>
         <p>O Projeto Milênio — RISSET DIVINO apresenta, com clareza e reverência, o Plano, o Padrão, a Ordem e o Propósito: Cristo no centro, as Escrituras em conferência e a Família de Deus ativa em movimento.</p>
         <div class="participation-pillars" aria-label="Síntese do Projeto">
@@ -32,10 +32,15 @@ export function renderParticipationPage() {
         <article class="participation-intro">
           <p class="section-kicker">Resposta do participante</p>
           <h2>Como você deseja caminhar conosco?</h2>
-          <p>Este registro é voluntário. Ele nos ajuda a conhecer os congressistas e outras pessoas interessadas, seus dons, áreas de serviço e a melhor forma de prosseguir o diálogo.</p>
+          <p>Este registro é voluntário. Ele nos ajuda a conhecer participantes de congressos, eventos locais, igrejas, instituições e pessoas independentes, seus dons, áreas de serviço e a melhor forma de prosseguir o diálogo.</p>
           <div class="participation-note">
             <strong>Uma obra sem fins lucrativos.</strong>
             <p>O Projeto não substitui a Bíblia, a Igreja ou a comunhão. Organiza a mensagem e conecta pessoas dispostas a servir com fé, responsabilidade e gratidão.</p>
+          </div>
+          <div class="response-sheet">
+            <strong>Ficha oficial para impressão e compartilhamento</strong>
+            <p>Indicada para congressos, encontros, igrejas, associações e eventos locais. Depois de preenchida, pode ser entregue ao responsável pelo encontro.</p>
+            <a class="participate secondary-action" href="/assets/ficha-oficial-resposta-risset-divino.pdf" target="_blank" rel="noopener" download>BAIXAR FICHA OFICIAL (PDF)</a>
           </div>
         </article>
         <form class="participation-form" id="participationForm">
@@ -44,6 +49,19 @@ export function renderParticipationPage() {
             <label>Cidade e Estado<input name="localidade" autocomplete="address-level2" required maxlength="120" placeholder="Ex.: Campinas — SP" /></label>
           </div>
           <label>E-mail<input name="email" type="email" autocomplete="email" required maxlength="160" /></label>
+          <label>Como conheceu ou participou do Projeto?
+            <select name="origem" required>
+              <option value="">Selecione</option>
+              <option value="congresso-medade-2026">Congresso MEDADE 2026</option>
+              <option value="evento-local">Evento local</option>
+              <option value="igreja-comunidade">Igreja ou comunidade</option>
+              <option value="instituicao-associacao">Instituição ou associação</option>
+              <option value="indicacao">Indicação de participante</option>
+              <option value="site-redes">Site ou redes sociais</option>
+              <option value="independente">Participação independente</option>
+              <option value="outro">Outro</option>
+            </select>
+          </label>
           <label>Como você se identifica?
             <select name="perfil" required>
               <option value="">Selecione</option>

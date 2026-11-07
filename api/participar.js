@@ -17,10 +17,11 @@ export default async function handler(request, response) {
   const localidade = clean(body.localidade, 120);
   const email = clean(body.email, 160).toLowerCase();
   const perfil = clean(body.perfil, 80);
+  const origem = clean(body.origem, 80);
   const interesses = Array.isArray(body.interesses)
     ? body.interesses.map((item) => clean(item, 80)).filter(Boolean).slice(0, 8)
     : [];
-  if (!nome || !localidade || !perfil || !body.consentimento || !/^\S+@\S+\.\S+$/.test(email)) {
+  if (!nome || !localidade || !perfil || !origem || !body.consentimento || !/^\S+@\S+\.\S+$/.test(email)) {
     return response.status(400).json({ error: "Confira os campos obrigatórios." });
   }
   const url = process.env.SUPABASE_URL;
@@ -41,7 +42,7 @@ export default async function handler(request, response) {
       contribuicao: clean(body.contribuicao, 800),
       mensagem: clean(body.mensagem, 1200),
       consentimento: true,
-      origem: "congresso-2026",
+      origem,
     }),
   });
   if (!upstream.ok) {

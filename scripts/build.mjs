@@ -17,6 +17,7 @@ const assets = [
   "portal-eterno-capa.png",
   "risset-tema-instrumental.wav",
   "sete-promulgacoes.png",
+  "ficha-oficial-resposta-risset-divino.pdf",
 ];
 
 async function restoreAsset(fileName) {

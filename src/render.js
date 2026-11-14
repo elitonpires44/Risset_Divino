@@ -206,6 +206,10 @@ export function renderPage() {
     ${renderHeader()}
     <main id="inicio">
       ${renderHero()}
+      <section class="vv-invite" aria-labelledby="vv-invite-title">
+        <a class="vv-art" href="/verdadeiro-voce" aria-label="Conhecer O Verdadeiro Você"><img src="/assets/vv-portal.webp" width="941" height="1672" loading="lazy" alt="O Verdadeiro Você — portal gótico dourado aberto e convite à Jornada" /></a>
+        <div><p class="section-kicker">Conheça o VV</p><h2 id="vv-invite-title">O Verdadeiro Você</h2><p>Para onde está caminhando? Você pode começar como está e onde estiver.</p><p>Uma Jornada de fé, reflexão e vida prática, em doze etapas.</p><a class="participate" href="/verdadeiro-voce#etapa-0">Dê o primeiro passo</a></div>
+      </section>
       ${renderImpact()}
       ${renderFoundations()}
       ${renderBand()}

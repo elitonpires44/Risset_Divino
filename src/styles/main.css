@@ -1039,3 +1039,6 @@ footer p {
   font-size: 0.82rem;
   text-align: center;
 }
+
+/* Convite à Jornada VV: arte integral e legível. */
+.vv-invite{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);align-items:center;gap:clamp(28px,6vw,80px);max-width:1120px;margin:auto;padding:72px 24px}.vv-invite .vv-art{display:block}.vv-invite img{width:100%;height:auto;object-fit:contain;border-radius:8px;filter:none}.vv-invite p{max-width:620px}.vv-invite .participate{display:inline-block}.topbar nav{flex-wrap:wrap;justify-content:flex-end;row-gap:8px}@media(max-width:760px){.vv-invite{grid-template-columns:1fr;padding:44px 20px}.vv-invite .vv-art{max-width:420px;margin:auto}.vv-invite h2{font-size:2.5rem}}

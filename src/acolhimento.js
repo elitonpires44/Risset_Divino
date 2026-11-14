@@ -11,6 +11,7 @@ export function renderWelcomePage() {
 <body><header><a href="/">RISSET DIVINO · Projeto Milênio</a><nav aria-label="Navegação"><a href="/">Início</a> · <a href="/participar">Participar</a></nav></header>
 <main><p class="eyebrow">A Família de Deus Ativa em Movimento</p><h1>Um convite para conhecer e caminhar.</h1>
 <p class="intro">Escolha um tema. Nosso assistente apresenta a mensagem do projeto em palavras simples, com acesso direto ao conteúdo oficial.</p>
+<p><a class="action" href="/verdadeiro-voce">Conheça o VV — O Verdadeiro Você</a></p>
 <div class="topics" role="group" aria-label="Escolha um tema">${Object.entries(topics).map(([id,t])=>`<button type="button" data-topic="${id}" aria-pressed="false" aria-controls="response">${t.title}</button>`).join('')}</div>
 <section class="answer" id="response" aria-live="polite" aria-atomic="true" aria-busy="false"><h2 id="answer-title">Seja bem-vindo.</h2><p id="answer">Comece pelo propósito do projeto ou escolha o tema que deseja conhecer.</p><p id="source">Respostas baseadas nos textos publicados neste site.</p><a class="action" id="next" href="/#proposito">Conhecer o propósito</a></section>
 <p class="note">As sínteses podem ser preparadas com inteligência artificial. Confira sempre o conteúdo oficial pelos links. Esta consulta por temas não solicita dados pessoais.</p>

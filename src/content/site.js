@@ -9,6 +9,7 @@ export const site = {
     subtitle: "Projeto Milênio",
   },
   nav: [
+    { label: "O Verdadeiro Você", href: "/verdadeiro-voce" },
     { label: "Conhecer", href: "/conhecer" },
     { label: "Propósito", href: "#proposito" },
     { label: "Plano", href: "#plano" },

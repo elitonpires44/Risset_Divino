@@ -1,6 +1,7 @@
 import { cp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { renderJourneyPage } from "../src/jornada.js";
 import { renderWelcomePage } from "../src/acolhimento.js";
 import { renderPage } from "../src/render.js";
 import { renderParticipationPage } from "../src/participar.js";
@@ -9,6 +10,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
 const assetData = join(root, "src/assets-data");
 const assets = [
+  "vv-portal.webp",
   "hero-risset-divino.png",
   "da-origem-a-origem.png",
   "identidade-risset.png",
@@ -43,6 +45,12 @@ await mkdir(join(dist, "conhecer"), { recursive: true });
 
 const participationPage = renderParticipationPage();
 const welcomePage = renderWelcomePage();
+const journeyPage = renderJourneyPage();
+await mkdir(join(dist, "verdadeiro-voce"), { recursive: true });
+await writeFile(join(dist, "verdadeiro-voce", "index.html"), journeyPage, "utf8");
+await writeFile(join(dist, "verdadeiro-voce.html"), journeyPage, "utf8");
+await cp(join(root, "src/styles/jornada.css"), join(dist, "jornada.css"));
+await cp(join(root, "src/scripts/jornada.js"), join(dist, "jornada.js"));
 
 await writeFile(join(dist, "index.html"), renderPage(), "utf8");
 await writeFile(join(dist, "participar.html"), participationPage, "utf8");
